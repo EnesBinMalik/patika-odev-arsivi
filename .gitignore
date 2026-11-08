@@ -13,3 +13,5 @@ Thumbs.db
 
 node_modules/
 __pycache__/
+
+preview.html
