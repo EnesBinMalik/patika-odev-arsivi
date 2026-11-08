@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 480" width="1280" height="480" role="img" aria-label="Hesap Makinesi — ödev kapağı">
+<defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#05090F"/><stop offset="52%" stop-color="#0A1220"/><stop offset="100%" stop-color="#111D31"/></linearGradient><linearGradient id="acc" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#38BDF8"/><stop offset="55%" stop-color="#0284C7"/><stop offset="100%" stop-color="#0284C7" stop-opacity="0.06"/></linearGradient><pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0V40" fill="none" stroke="#FFFFFF" stroke-opacity="0.035"/></pattern><radialGradient id="g1" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#38BDF8" stop-opacity="0.26"/><stop offset="100%" stop-color="#38BDF8" stop-opacity="0"/></radialGradient><style>.t{font-family:'Segoe UI',Inter,system-ui,-apple-system,Arial,sans-serif}.m{font-family:'JetBrains Mono','Cascadia Code',Consolas,monospace}.ttl{font-family:'Segoe UI',Inter,system-ui,-apple-system,Arial,sans-serif;font-weight:700;letter-spacing:-1.6px}.cap{font-family:'Segoe UI',Inter,system-ui,-apple-system,Arial,sans-serif;font-weight:700;letter-spacing:3px}</style></defs>
+<rect width="1280" height="480" fill="url(#bg)"/>
+<rect width="1280" height="480" fill="url(#grid)"/>
+<ellipse cx="200" cy="70" rx="420" ry="240" fill="url(#g1)"/>
+<rect x="0" y="0" width="6" height="480" fill="url(#acc)"/>
+<text x="56" y="48" class="m" font-size="12" fill="#5A6B88" letter-spacing="1.8">PATİKA · ÖDEV 03</text>
+<text x="1224" y="48" text-anchor="end" class="m" font-size="12" fill="#38BDF8" letter-spacing="1.8" fill-opacity="0.9">ENES ÖZTÜRK</text>
+<line x1="56" y1="64" x2="1224" y2="64" stroke="#FFFFFF" stroke-opacity="0.07"/>
+<text x="56" y="176" class="ttl" font-size="56" fill="#E9F0FB">Hesap Makinesi</text>
+<text x="56" y="216" class="t" font-size="19" fill="#8FA0BD">Künye · kazanımlar · kurulum · kabul kriterleri</text>
+<rect x="56" y="244" width="56" height="3" rx="1.5" fill="#38BDF8"/>
+<text x="56" y="316" class="m" font-size="13" fill="#5A6B88">$ npm install &amp;&amp; npm run dev</text>
+<text x="56" y="344" class="m" font-size="13" fill="#38BDF8">$ git commit -m "odev 03: hazır"</text>
+<line x1="56" y1="392" x2="1224" y2="392" stroke="#FFFFFF" stroke-opacity="0.07"/>
+<text x="56" y="428" class="t" font-size="24" font-weight="700" fill="#E9F0FB">Enes Öztürk</text>
+<text x="56" y="452" class="m" font-size="12" fill="#5A6B88">github.com/EnesBinMalik</text>
+<text x="1224" y="428" text-anchor="end" class="cap" font-size="12" fill="#475569">İMZALI ÖDEV</text>
+</svg>

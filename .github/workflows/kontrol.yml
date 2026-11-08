@@ -1,0 +1,36 @@
+name: Ödev kontrolü
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  kontrol:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Ödev klasörlerini listele
+        run: |
+          echo "## Ödev klasörleri" >> "$GITHUB_STEP_SUMMARY"
+          find . -mindepth 2 -maxdepth 2 -type d \
+            -not -path "./.git*" -not -path "./docs*" -not -path "./tools*" \
+            -not -path "./sablon*" -not -path "./kontratlar*" -not -path "./.github*" \
+            | sort | sed 's|^\./|- |' >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Her ödevde README ve rozet var mı
+        run: |
+          hata=0
+          while IFS= read -r d; do
+            [ -f "$d/README.md" ] || { echo "::error file=$d::README.md eksik"; hata=1; }
+            [ -f "$d/docs/rozet.svg" ] || { echo "::warning file=$d::docs/rozet.svg eksik"; }
+          done < <(find . -mindepth 2 -maxdepth 2 -type d \
+            -not -path "./.git*" -not -path "./docs*" -not -path "./tools*" \
+            -not -path "./sablon*" -not -path "./kontratlar*" -not -path "./.github*" | sort)
+          exit $hata
+
+      - name: SVG dosyaları geçerli mi
+        run: |
+          while IFS= read -r f; do python3 -c "import xml.etree.ElementTree as E,sys; E.parse(sys.argv[1])" "$f"; done \
+            < <(find . -name "*.svg" -not -path "./.git/*")
